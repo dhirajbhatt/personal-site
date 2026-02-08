@@ -12,23 +12,24 @@ const SideBar = () => (
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
+        <h2>Dhiraj Bhatt</h2>
         <p>
-          <a href="mailto:michael@mldangelo.com">michael@mldangelo.com</a>
+          <a href="mailto:dhirajbhatt@live.com">dhirajbhatt@live.com</a>
         </p>
       </header>
     </section>
 
     <section className="blurb">
       <h2>About</h2>
+      <p>This is my personal space.</p>
       <p>
-        Hi, I&apos;m Michael. I am a{' '}
-        <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC
-        alumnus, and the co-founder and CTO of{' '}
-        <a href="https://promptfoo.dev">Promptfoo</a>. Previously, I
-        was VP of Engineering at <a href="https://usesmileid.com">SmileID</a>,
-        co-founder and CTO of <a href="https://arthena.com">Arthena</a>, and
-        co-founded <a href="https://matroid.com">Matroid</a>.
+        I enjoy building things, learning every day, and thinking deeply about
+        how people and systems behave. I care about clarity, simplicity, and
+        doing work that feels honest.
+      </p>
+      <p>
+        Outside work, I love movies, cricket, snooker, and long conversations
+        that wander from philosophy to everyday life.
       </p>
       <ul className="actions">
         <li>
@@ -48,7 +49,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.
+        &copy; Dhiraj Bhatt <Link to="/">dhirajbhatt.com</Link>.
       </p>
     </section>
   </section>

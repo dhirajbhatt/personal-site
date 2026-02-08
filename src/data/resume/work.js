@@ -2,179 +2,98 @@
  * @typedef {Object} Position
  * Conforms to https://jsonresume.org/schema/
  *
- * @property {string} name - Name of the company
- * @property {string} position - Position title
- * @property {string} url - Company website
- * @property {string} startDate - Start date of the position in YYYY-MM-DD format
- * @property {string|undefined} endDate - End date of the position in YYYY-MM-DD format.
- * If undefined, the position is still active.
- * @property {string|undefined} summary - html/markdown summary of the position
- * @property {string[]} highlights - plain text highlights of the position (bulleted list)
+ * @property {string} name
+ * @property {string} position
+ * @property {string} url
+ * @property {string} startDate
+ * @property {string|undefined} endDate
+ * @property {string|undefined} summary
+ * @property {string[]} highlights
  */
 const work = [
   {
-    name: 'Promptfoo',
-    position: 'Co-founder & CTO',
-    url: 'https://promptfoo.dev',
-    startDate: '2024-07-01',
-    summary: 'Promptfoo builds open-source tools to evaluate, find, and fix vulnerabilities in large language models (LLMs). Our open-source tools are used by over 35,000 developers and researchers worldwide.',
+    name: 'KOKO Networks',
+    position: 'Chief Architect, Head of Software Engineering, India Head',
+    url: 'https://kokonetworks.com',
+    startDate: '2021-07-01',
+    summary:
+      'I led the architecture and execution of a production platform where software met real operations. The work combined SaaS, IoT, and data systems that supported field hardware, customer journeys, payments, logistics, and internal operations. I built and led distributed teams across geographies and built a delivery cadence that held quality and reliability as first class outcomes.\n\nI spent a lot of time on platform foundations: resilient services, clean interfaces, disciplined delivery, and systems that teams could trust day after day. Data was treated as a product, with governance and privacy at the center, so business teams could make decisions with clarity. I also drove initiatives to improve cost discipline and operational efficiency without trading away reliability.',
     highlights: [
-      'Built and scaled engineering team, emphasizing diversity and open-source contribution',
-      'Established key partnerships with AI research institutions and tech companies',
+      'Built and scaled a multi pod engineering organisation across platform, data, mobile, and quality, with clear ownership, delivery accountability, and budget discipline',
+      'Defined and executed a multi country platform strategy aligning SaaS, IoT, and data foundations for current operations and future expansion',
+      'Modernised the hardware and IoT platform with a next generation device architecture designed for scale, reliability, repairability, and better unit economics',
+      'Built a PII compliant data ecosystem and analytics layer that enabled self serve insights and practical AI assisted decision support for operations and leadership',
+      'Strengthened release quality through automation, quality gates, and go no go discipline, improving confidence in production changes',
+      'Delivered cloud efficiency outcomes through infrastructure optimisation, contributing to meaningful year on year cost reduction while maintaining reliability',
+      'Tech footprint included AWS, Python, Flask, Kubernetes, Docker, Postgres, Celery, Vue.js, Kotlin, Firebase, AWS Glue, Redshift, SQL, and IoT telemetry and monitoring workflows',
     ],
   },
   {
-    name: 'Smile Identity',
-    position: 'VP Engineering & Head of AI',
-    url: 'https://smileidentity.com',
-    startDate: '2022-01-01',
-    endDate: '2024-07-01',
-    summary: `Smile builds machine learning APIs to compare user submitted photos to ID documents. Our APIs are
-    used by hundreds of thousands of people every day to access financial services. As VP of Engineering,
-    I provide technical leadership on high-impact projects, influence and coach a distributed team of engineers,
-    and facilitate alignment and clarity across teams on goals, outcomes, and timelines. I was promoted
-    from Director of Engineering to VP of Engineering in April 2022, and then to VP of Engineering and Head
-    of AI in November 2022. I lead a 20+ person engineering org. I directly manage ~8 engineers and spend
-    >50% of my time writing code.`,
+    name: 'Rocket Software',
+    position: 'Chief Architect, Rocket Center of Excellence, India',
+    url: 'https://www.rocketsoftware.com',
+    startDate: '2018-06-01',
+    endDate: '2021-07-01',
+    summary:
+      'I served as a principal architect and people manager across teams in India and globally. The work blended product roadmap, architecture governance, and execution across enterprise scale BI and platform components. I focused on building consistency across product suites so engineering teams could move faster with fewer surprises.\n\nA major theme was building a common platform foundation: standardising runtimes, language versions, build systems, and dependency governance to address licensing changes, security posture, and long term maintainability.',
     highlights: [
-      'Redesigned engineering processes for bug tracking, meetings, and standups. Improved culture for code reviews, blameless post-mortems, and retrospectives.',
-      'Re-architected engineering hiring and onboarding processes. Recruited several strong engineers.',
-      'Reorged engineering teams to focus on product delivery. Created a new team to focus on ML infrastructure.',
-      'Lead re-design of internal APIs for inference. Built new computer vision pipelines for industry leading certifications (NIST/iBeta liveness).',
-      'Pitched, designed, developed, deployed, and maintain a fraud detection product based on 1-N facial recognition using embeddings and vector search.',
+      'Owned architecture and roadmap direction for the QMF BI product line, supporting an established enterprise business line',
+      'Defined and governed a common platform foundation across product suites, standardising runtimes, language versions, build systems, and open source dependencies to improve security, compliance, and maintainability',
+      'Worked across distributed teams and functions to align product strategy, engineering execution, and customer expectations',
+      'Raised technical consistency and delivery reliability by simplifying shared foundations and reducing upgrade and integration risk',
     ],
   },
   {
-    name: 'Skeptical Investments',
-    position: 'Co-founder',
-    url: 'http://skepticalinvestments.biz',
-    startDate: '2017-04-01',
-    summary: `Skeptical Investments is a micro-vc fund focused on Angel, Seed, and Series-A
-    YC companies.`,
+    name: 'SevOne',
+    position: 'India Head and Director of Engineering',
+    url: 'https://www.sevone.com',
+    startDate: '2015-05-01',
+    endDate: '2018-05-01',
+    summary:
+      'I established and scaled an India development centre and led engineering execution across core product areas. The work involved enterprise customers, security and compliance expectations, and high bar delivery. I operated across hiring, org setup, engineering leadership, and customer facing technical work.\n\nThe theme was building teams and systems that delivered reliably under real constraints, while meeting demanding certification and validation needs.',
     highlights: [
-      'Created the InstaSafe. Fast, automated investment docs for YC companies.',
-      'Advise several startups in the fund.',
+      'Established the India development centre from scratch, covering hiring, team formation, and engineering execution',
+      'Helped drive security and compliance outcomes including Common Criteria certifications and FIPS validation efforts',
+      'Served as engineering representative in customer POVs with global enterprise partners and operators',
+      'Owned architecture and engineering strategy goals and delivered meaningful cost savings through platform and execution improvements',
     ],
   },
   {
-    name: 'Arthena',
-    position: 'Co-founder & C.T.O.',
-    url: 'https://arthena.com',
-    startDate: '2014-01-01',
-    endDate: '2022-01-01',
-    summary: `Arthena is a Series A Company funded by <a href="https://www.anthemis.com/">Athemis</a>,
-    <a href="https://foundationcapital.com">Foundation Capital</a>, and <a href="https://ycombinator.com/">YC</a>.
-    We develop quantitative strategies to predict the value of fine art and build investment products.
-    I ran a 20-person product and engineering org for 8 years. We were acquired by
-    <a href="https://www.masterworks.com/">Masterworks</a> in 2023.`,
+    name: 'Symantec',
+    position: 'Principal Engineer',
+    url: 'https://www.broadcom.com/company/symantec',
+    startDate: '2008-01-01',
+    endDate: '2011-01-01',
+    summary:
+      'I worked as a Principal Engineer on enterprise security and mobility platforms, with a strong focus on device management, application security, and platform evolution. I led development of key components of Norton’s MDM solution across Android and OSX, and contributed deeply to security architecture, performance, and reliability. This role strengthened my hands on engineering depth while also expanding my responsibilities across architecture, mentoring, and cross team leadership.',
     highlights: [
-      'Built production, online, end-to-end optimized machine learning pipelines for time-series prediction.',
-      'Designed micro-service architecture around: data collection, data integrity, feature engineering, research, strategy, backtesting, deployment, and reporting.',
-      "Set and communicated team priorities that supported the broader organization's goals. Aligned strategy, processes, and decision-making across teams.",
-      "Set clear expectations with individuals based on their level and role and aligned them to the broader organization's goals. Met regularly with individuals to discuss performance and development, and provided feedback and coaching.",
-      'Developed the long-term technical vision and roadmap within, and often beyond, the scope of my teams. Evolved the roadmap to meet anticipated future requirements and infrastructure needs.',
+      'Led development of core MDM features for Android and OSX as part of Norton device management solutions',
+      'Designed and built application security libraries to detect jailbreak, root access, and unsafe device states prior to app installation',
+      'Contributed to the architecture initiative that transitioned the platform toward a microservices based design',
+      'Finalist at Symantec Cyber War Games 2015 held in Mountain View',
+      'Worked with autonomous vendors to clear FIPS 140 2 and Common Criteria certification requirements',
+      'Trained and mentored multiple product teams on security fundamentals, encryption, digital signing, and certificates',
+      'Recipient of the Symantec Standing Ovation Award for contributions to the CCS External Data Integrator product',
+      'Built and scaled lab infrastructure including capacity planning, procurement, deployment, and operational readiness',
+      'Hired, mentored, and coached engineers within scrum teams, driving strong delivery and quality outcomes',
+      'Defined performance metrics and proof of concept tools, and helped drive test driven development and high automation coverage',
+      'Supported RFPs, proof of concepts, client demos, and engineering escalations in collaboration with support teams',
     ],
   },
   {
-    name: 'Enveritas',
-    position: 'ML Engineering Contractor',
-    url: 'http://enveritas.org',
-    startDate: '2016-09-01',
-    endDate: '2018-01-01',
-    summary: `Enveritas is a non-profit that works with coffee farmers to improve their livelihoods.
-    I joined on day one and helped build a variety of tools to collect and analyze data. I also advised
-    on technical strategy, helped hire engineers, and advised on their YC application.`,
+    name: 'IBM Internet Security Systems',
+    position: 'Systems Engineer, R&D',
+    url: 'https://www.ibm.com/security',
+    startDate: '2006-01-01',
+    endDate: '2008-01-01',
+    summary:
+      'I worked in R&D on enterprise security products, with ownership of core components and close collaboration across product, engineering, and customer teams. This role provided early exposure to how security products are built, operated, and supported at scale, and shaped my foundation in reliability, system design, and customer driven engineering.',
     highlights: [
-      'Trained a model for the Brazilian Coffee Scenes Dataset with better than state of the art accuracy.',
-      'Collected training sets on the ground in Uganda. Built dashboards to visualize work of surveyors using Flask, React, and D3.',
-      "Performed supporting analysis to ensure data integrity using Pandas, t-SNE, SVM's, and other techniques.",
-    ],
-  },
-  {
-    name: 'Zenysis',
-    position: 'Software Engineering Contractor',
-    url: 'https://zenysis.com',
-    startDate: '2016-02-01',
-    endDate: '2016-03-01',
-    summary: `Zenysis develops data analysis and visualization tools for government agencies and international organizations.
-    Their solutions help improve decision-making by integrating and analyzing large-scale datasets from various sources.
-    I was the second contributor to the codebase. We built data visualization tools and tackled complex data ingestion
-    challenges for the Ethiopian Ministry of Health.`,
-    highlights: [
-      'Worked in Addis Ababa for the Ethiopian Ministry of Health and built data visualization tools in React and Flask.',
-      'Ingested multiple databases with different alphabets, calendars, and without official spellings of geographic locations.',
-    ],
-  },
-  {
-    name: 'Matroid',
-    position: 'Co-founder',
-    url: 'https://matroid.com',
-    startDate: '2015-07-01',
-    endDate: '2016-01-01',
-    summary: `Matroid is a computer vision platform for creating and deploying detectors. Detectors help customers identify objects,
-    events, or patterns in images and videos without requiring machine learning or coding expertise. I played a crucial role in
-    defining the company's vision. I was responsible for architecting and building the initial product. I left shortly after the
-    Series A to focus on Arthena.`,
-    highlights: [
-      'Developed end to end machine learning pipeline to train visual classifiers from keywords using Caffe, Node.JS, Redis, MongoDB, and other technologies.',
-    ],
-  },
-  {
-    name: 'Planet',
-    position: 'Missions Intern',
-    url: 'https://planet.com',
-    startDate: '2014-06-01',
-    endDate: '2015-01-01',
-    highlights: [
-      'Built models to improve image quality, signal to noise ratio, and dynamic range.',
-      'Performed statistical analysis of image quality in Matlab and Python.  Developed flight software in C++.',
-      'Organized first hackathon, prototyped hardware, and designed and built photography equipment for rocket launches.',
-    ],
-  },
-  {
-    name: 'Planetary Resources',
-    position: 'Avionics Intern',
-    startDate: '2014-01-01',
-    endDate: '2014-05-01',
-    url: 'http://planetaryresources.com',
-    highlights: [
-      'Developed simulations in Matlab for Attitude Determination and Control Subsystem.',
-      'Developed processes for in lab testing and characterization of various subsystems.',
-      'Assembled flight hardware in cleanroom.',
-    ],
-  },
-  {
-    name: 'Facebook',
-    position: 'Software Engineer Intern',
-    url: 'https://facebook.com',
-    startDate: '2013-06-01',
-    endDate: '2013-09-01',
-    highlights: [
-      'Developed software in python for automated testing of servers.',
-      'Performed statistical analysis with R, HIVE to assist in triage of malfunctioning servers.',
-      "Worked with vendors and ODM's during triage to assist in risk mitigation.",
-    ],
-  },
-  {
-    name: 'SEDS-USA',
-    position: 'At Large Board Member',
-    url: 'http://seds.org',
-    startDate: '2013-10-01',
-    endDate: '2014-10-01',
-    highlights: [
-      "Elected to Board of Directors of the USA's largest student space advocacy group based on 5+ years of work with SEDS.",
-      'Responsibilities included: organizational strategy, conference presentations, fundraising, special projects, promoting SEDS nationally and internationally, and photographing conferences.',
-    ],
-  },
-  {
-    name: 'UB Nanosatellite Program',
-    position: 'Co-founder, Program Manager',
-    url: 'https://ubnl.space/',
-    startDate: '2010-10-01',
-    endDate: '2012-06-01',
-    highlights: [
-      'Coauthored grant to build a multi-spectral imaging satellite as part of the AFRL University Nanosatellite Program.',
-      'Lead a team of 60 students through satellite development life cycle. Served as a technical expert, acquired intimate working knowledge of satellite subsystems.  Solicited funding through NASA, AFOSR, and several corporate sponsors.',
+      'Sole owner of SiteProtector within an independent onsite team, responsible for delivery and stability',
+      'Contributed to product and technical documentation for BBP, Business Continuity Plans, and OPAL process libraries',
+      'Conducted training on Virtual Private Networks as part of Train the Trainers initiatives with CSI, IBM Software Labs, and academic institutions',
+      'Awarded Bravo The Best of IBM on multiple occasions for delivery quality, training contributions, and successful proof of concept implementations',
+      'Aligned with the Product Management track to provide early feedback and insights on upcoming product releases',
     ],
   },
 ];

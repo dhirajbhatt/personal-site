@@ -5,36 +5,46 @@ import Main from '../layouts/Main';
 
 const Index = () => (
   <Main
-    description={
-      "Michael D'Angelo's personal website. New York based Stanford ICME graduate, "
-      + 'VP of Engineering at Smile Identity, co-founder of Arthena and Matroid, and YC Alumni.'
-    }
+    description="Dhiraj Bhatt's personal website."
   >
     <article className="post" id="index">
       <header>
         <div className="title">
           <h2>
-            <Link to="/">About this site</Link>
+            <Link to="/">Dhiraj Bhatt</Link>
           </h2>
-          <p>
-            A beautiful, responsive, statically-generated, react application
-            written with modern Javascript.
-          </p>
+          <p>#84keysandlife.</p>
         </div>
       </header>
-      <p>
-        {' '}
-        Welcome to my website. Please feel free to read more{' '}
-        <Link to="/about">about me</Link>, or you can check out my{' '}
-        <Link to="/resume">resume</Link>, <Link to="/projects">projects</Link>,{' '}
-        view <Link to="/stats">site statistics</Link>, or{' '}
-        <Link to="/contact">contact</Link> me.
-      </p>
-      <p>
-        {' '}
-        Source available{' '}
-        <a href="https://github.com/mldangelo/personal-site">here</a>.
-      </p>
+      <section>
+        <p>
+          Hi, I’m Dhiraj. I enjoy architecting and building systems that operate in the real world.
+        </p>
+
+        <p>
+          My work involves building and leading engineering teams across geographies, often where
+          software meets physical operations, customers, and data that people rely on every day. I
+          have worked across large enterprises and startups, and I care deeply about calm
+          execution, quality, and platforms that continue to work long after the excitement of
+          launch.
+        </p>
+
+        <p>
+          I am drawn to projects with real impact, where technology improves everyday life for
+          people. I am especially interested in how data and AI can support better decision making,
+          not by adding complexity, but by creating clarity and trust in systems that matter.
+        </p>
+
+        <p>
+          If you are curious, you can read a little more <Link to="/about">about me</Link>, or
+          browse a few selected <Link to="/projects">projects</Link> and experiments.
+        </p>
+
+        <p>
+          Best way to reach me: dhirajbhatt@live.com.
+        </p>
+
+      </section>
     </article>
   </Main>
 );
