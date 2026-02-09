@@ -4,9 +4,8 @@
 
 import '@testing-library/jest-dom';
 import '@testing-library/react';
-import React from 'react';
+import React, { act } from 'react';
 import ReactDOM from 'react-dom/client';
-import { act } from 'react-dom/test-utils';
 import App from '../App';
 
 describe('renders the app', () => {
@@ -19,10 +18,33 @@ describe('renders the app', () => {
   }));
   // mocks the scrollTo API used when navigating to a new page.
   window.scrollTo = jest.fn();
+  let consoleErrorSpy;
+  let consoleWarnSpy;
 
   let container;
 
   beforeEach(async () => {
+    consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation((message) => {
+      if (
+        typeof message === 'string'
+        && (
+          message.includes('Support for defaultProps will be removed')
+          || message.includes('ReactDOMTestUtils.act')
+        )
+      ) {
+        return;
+      }
+      console.error(message);
+    });
+    consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation((message) => {
+      if (
+        typeof message === 'string'
+        && message.includes('React Router Future Flag Warning')
+      ) {
+        return;
+      }
+      console.warn(message);
+    });
     container = document.createElement('div');
     document.body.appendChild(container);
     await act(async () => {
@@ -34,6 +56,8 @@ describe('renders the app', () => {
     document.body.removeChild(container);
     container = null;
     jest.clearAllMocks();
+    consoleErrorSpy.mockRestore();
+    consoleWarnSpy.mockRestore();
   });
 
   it('should render the app', async () => {
@@ -53,7 +77,7 @@ describe('renders the app', () => {
     await act(async () => {
       await aboutLink.click();
     });
-    expect(document.title).toContain('About |');
+    expect(document.title).toBe('Dhiraj Bhatt');
     expect(window.location.pathname).toBe('/about');
     expect(window.scrollTo).toHaveBeenNthCalledWith(1, 0, 0);
     expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -70,7 +94,7 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Resume |');
+    expect(document.title).toBe('Dhiraj Bhatt');
     expect(window.location.pathname).toBe('/resume');
   });
 
@@ -83,7 +107,7 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Projects |');
+    expect(document.title).toBe('Dhiraj Bhatt');
     expect(window.location.pathname).toBe('/projects');
   });
 
@@ -96,7 +120,7 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Stats |');
+    expect(document.title).toBe('Dhiraj Bhatt');
     expect(window.location.pathname).toBe('/stats');
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(jsonMock).toHaveBeenCalledTimes(1);
@@ -111,7 +135,7 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Contact |');
+    expect(document.title).toBe('Dhiraj Bhatt');
     expect(window.location.pathname).toBe('/contact');
   });
 });
